@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "respawn-menu",
+	"version": "${version}",
+	"name": "Respawn Menu",
+	"description": "This mod adds a simple respawn menu, activated by pressing R.",
+	"authors": [
+		"SlightlyGoodGames"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/respawn-menu",
+		"sources": "https://github.com/SlightlyGoodGames/respawn-menu"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/respawn-menu/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.respawnmenu.RespawnMenu"
+		],
+		"client": [
+			"name.respawnmenu.client.RespawnMenuClient"
+		]
+	},
+	"mixins": [
+		"respawn-menu.mixins.json",
+		{
+			"config": "respawn-menu.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
